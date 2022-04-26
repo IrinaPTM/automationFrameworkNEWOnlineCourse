@@ -3,7 +3,7 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class HomePage extends BasePage {
+public class  HomePage extends BasePage {
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -20,8 +20,17 @@ public class HomePage extends BasePage {
         return getElementByXpath("//*[@id='input-food-search']");
     }
 
+    public WebElement getSearchField() {
+        return getElementByXpath("//input[@id='input-food-search']");
+
+    }
+
     public void navigate() {
         driver.get(getEnv());
     }
 
+    public WebElement getSearchImageBtn() {
+        return getElementByXpath("//*[@id='find-restaurants']");
+    }
 }
+
